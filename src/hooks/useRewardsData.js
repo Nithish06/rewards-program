@@ -16,6 +16,7 @@ export const useRewardsData = () => {
   useEffect(() => {
     fetchTransactions()
       .then((res) => {
+        console.log(res)
         const enriched = res.data
           .map((txn) => ({
             ...txn,
